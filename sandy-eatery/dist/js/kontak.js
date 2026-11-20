@@ -1,7 +1,3 @@
-/* kontak.js — form Saran & Kritik.
-   Alur: validasi di browser → susun teks → buka WhatsApp (wa.me) dengan pesan terisi.
-   Tidak ada server dan tidak ada data yang disimpan; pengunjung yang menekan "Kirim" di WhatsApp.
-   Validasi memakai pemeriksaan string biasa (tanpa regex). */
 (function () {
     'use strict';
     var form = document.getElementById('formKontak');
@@ -107,7 +103,6 @@
         return msg;
     }
 
-    // ---------- Pengalaman mengetik ----------
     function updateCounter() {
         var n = f.pesan.value.length;
         counter.textContent = n + ' / ' + MAX;
@@ -132,7 +127,6 @@
     f.setuju.addEventListener('change', function () { run('setuju'); });
     f.tgl.max = todayISO();
 
-    // ---------- Susun pesan ----------
     function formatDate(iso) {
         var p = iso.split('-');
         var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
@@ -158,7 +152,6 @@
         return lines.join('\n');
     }
 
-    // ---------- Hasil ----------
     function button(label, cls, onClick, href) {
         var el = document.createElement(href ? 'a' : 'button');
         el.className = 'btn small ' + cls;
@@ -196,7 +189,7 @@
         var ta = document.createElement('textarea');
         ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
         document.body.appendChild(ta); ta.select();
-        try { document.execCommand('copy'); } catch (e) { /* abaikan */ }
+        try { document.execCommand('copy'); } catch (e) {}
         ta.remove();
     }
 

@@ -1,10 +1,8 @@
-/* main.js — dimuat di semua halaman: menu HP, status buka/tutup, animasi muncul. */
 (function () {
     'use strict';
     var root = document.documentElement;
     var body = document.body;
 
-    // ---------- Menu navigasi (HP) ----------
     var toggle = document.querySelector('.menu-toggle');
     var nav = document.getElementById('navMenu');
     if (toggle && nav) {
@@ -20,7 +18,6 @@
         });
     }
 
-    // ---------- Waktu sekarang di zona toko (bukan zona pengunjung) ----------
     function nowInShop() {
         var tz = body.dataset.tz || 'Asia/Jakarta';
         try {
@@ -44,7 +41,6 @@
 
     var DAY_NAMES = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
 
-    // ---------- Status buka/tutup ----------
     function updateStatus() {
         var openMin = parseInt(body.dataset.open, 10);
         var closeMin = parseInt(body.dataset.close, 10);
@@ -54,7 +50,6 @@
         var isClosedDay = closed.indexOf(now.day) !== -1;
         var text, state;
 
-        // hari buka berikutnya (melewati hari libur)
         var next = 1;
         while (next < 7 && closed.indexOf((now.day + next) % 7) !== -1) next++;
         var nextDay = (now.day + next) % 7;
@@ -81,7 +76,6 @@
             el.textContent = text;
         });
 
-        // sorot baris hari ini di tabel jam buka
         document.querySelectorAll('.hours li[data-day]').forEach(function (li) {
             li.classList.toggle('today', Number(li.dataset.day) === now.day);
         });
@@ -89,7 +83,6 @@
     updateStatus();
     setInterval(updateStatus, 60000);
 
-    // ---------- Animasi muncul saat di-scroll ----------
     var items = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window && items.length) {
         var io = new IntersectionObserver(function (entries) {

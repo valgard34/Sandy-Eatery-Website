@@ -1,18 +1,4 @@
 #!/usr/bin/env node
-/* =========================================================
-   SANDY EATERY — build.mjs
-   Pembuat situs statis TANPA dependensi (cukup Node 18+).
-
-     node build.mjs            -> hasil ke folder dist/
-     node build.mjs --serve    -> build + server lokal + build ulang otomatis
-     node build.mjs --serve --port=3000
-
-   Isi situs:
-     src/data/*.json   data (info toko, menu, galeri, testimoni)
-     src/pages/*.html  teks tiap halaman (bisa diedit langsung)
-     src/partials/*    kerangka halaman, header, footer
-     src/css, src/js   tampilan & perilaku
-   ========================================================= */
 import {
   readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync, readdirSync, watch,
 } from 'node:fs';
@@ -42,7 +28,6 @@ const readJson = (name) => JSON.parse(readText('data', name));
 const hash = (buf) => createHash('sha1').update(buf).digest('hex').slice(0, 8);
 const get = (obj, path) => path.split('.').reduce((o, k) => (o == null ? o : o[k]), obj);
 
-/* ---------- ikon media sosial ---------- */
 const SVG_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
 const ICONS = {
   whatsapp: `${SVG_OPEN}<path d="M3.5 20.5l1.4-4.2A8.5 8.5 0 1 1 8 19.5l-4.5 1z"/><path d="M9 8.5c.2 2.6 3 5.9 6.5 6.6l1.3-1.5-2.2-1.1-1 1c-1.2-.5-2.4-1.7-2.9-2.9l1-1-1-2.2z"/></svg>`,
@@ -50,9 +35,6 @@ const ICONS = {
   tiktok: `${SVG_OPEN}<path d="M14 3.5v10.8a3.7 3.7 0 1 1-3.7-3.7"/><path d="M14 3.5c.3 2.4 1.9 4.1 4.2 4.3"/></svg>`,
 };
 
-/* =========================================================
-   Data
-   ========================================================= */
 function loadData(warnings) {
   const site = readJson('site.json');
   const menu = readJson('menu.json');
@@ -60,7 +42,6 @@ function loadData(warnings) {
   const testimoni = readJson('testimoni.json');
   const images = readJson('images.json');
 
-  // WhatsApp: terima "0812…", "+62 812…", atau "62812…" — dijadikan 62812…
   let wa = String(site.whatsapp || '').replace(/\D/g, '');
   if (wa.startsWith('0')) wa = '62' + wa.slice(1);
   else if (wa.startsWith('8')) wa = '62' + wa;
@@ -98,9 +79,6 @@ function loadData(warnings) {
   return { site, menu, gallery, testimoni, images };
 }
 
-/* =========================================================
-   Komponen HTML
-   ========================================================= */
 function makeImg(images) {
   return function img(name, o = {}) {
     const m = images[name];
@@ -233,9 +211,6 @@ function testimoniHtml(list) {
         </section>`;
 }
 
-/* =========================================================
-   SEO
-   ========================================================= */
 function jsonLd(site) {
   const a = site.address;
   const ld = {
@@ -289,9 +264,6 @@ function seoHead(page, site, file) {
   return lines.join('\n    ');
 }
 
-/* =========================================================
-   Template mini
-   ========================================================= */
 function render(tpl, ctx) {
   return tpl.replace(/\{\{\{\s*([\w.]+)\s*\}\}\}|\{\{\s*([\w.]+)\s*\}\}/g, (_, raw, esc2) => {
     const v = get(ctx, raw || esc2);
@@ -300,7 +272,6 @@ function render(tpl, ctx) {
   });
 }
 
-// [[img nama alt="…" sizes="…" cls="…" pos="…" eager]]
 function expandDirectives(html, img) {
   return html.replace(/\[\[img\s+([\w-]+)([^\]]*)\]\]/g, (_, name, rest) => {
     const o = {};
@@ -322,9 +293,6 @@ function parsePage(src) {
   return { meta, body: m ? src.slice(m[0].length) : src };
 }
 
-/* =========================================================
-   Build
-   ========================================================= */
 function build() {
   const t0 = Date.now();
   const warnings = [];
@@ -335,7 +303,6 @@ function build() {
   mkdirSync(join(DIST, 'css'), { recursive: true });
   mkdirSync(join(DIST, 'js'), { recursive: true });
 
-  // salin aset
   cpSync(join(SRC, 'img'), join(DIST, 'img'), { recursive: true });
   if (existsSync(join(SRC, 'static'))) cpSync(join(SRC, 'static'), DIST, { recursive: true });
   const version = {};
@@ -408,7 +375,6 @@ function build() {
       },
     };
 
-    // urutan: partial -> directive gambar -> placeholder
     let content = body.replace(/<!--include:([\w-]+)-->/g, (_, n) => partial(n));
     content = content.replace(/<!--\/\/[\s\S]*?-->\s*/g, '');
     content = expandDirectives(content, img);
@@ -419,7 +385,6 @@ function build() {
     writeFileSync(join(DIST, file), html);
   }
 
-  // robots, sitemap, manifest
   const pages = readdirSync(pagesDir).filter((f) => f.endsWith('.html') && f !== '404.html');
   writeFileSync(join(DIST, 'robots.txt'),
     `User-agent: *\nAllow: /\n${site.baseUrl ? `\nSitemap: ${site.baseUrl}/sitemap.xml\n` : ''}`);
@@ -441,9 +406,6 @@ function build() {
   warnings.forEach((w) => console.log(`  ⚠ ${w}`));
 }
 
-/* =========================================================
-   Server lokal (opsional)
-   ========================================================= */
 const MIME = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.ico': 'image/x-icon',

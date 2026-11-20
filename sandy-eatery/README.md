@@ -61,12 +61,12 @@ Kalau nanti mau pesan masuk otomatis tanpa pengunjung menekan Kirim (atau ke ema
 
 ## Bagian pemesanan
 
-Sengaja belum ada. Slot-nya ditandai komentar di `src/pages/index.html` (di antara "Satu menu, banyak ukuran" dan "Galeri") dan di `src/pages/menu.html`. Tambahkan HTML-nya di sana; CSS gaya `.section`, `.card`, `.btn` bisa dipakai ulang.
+Sengaja belum ada. Tempat yang pas ada di `src/pages/index.html`, di antara bagian Best Seller dan Galeri, atau di `src/pages/menu.html`. Tambahkan HTML-nya di sana; CSS gaya `.section`, `.card`, `.btn` bisa dipakai ulang.
 
 ## Template singkat
 
 - `{{site.name}}` teks aman, `{{{sec.menu}}}` HTML mentah (hasil build).
 - `[[img nama alt="..." sizes="..." cls="..." pos="50% 50%"]]` menghasilkan `<img>` responsif lengkap dengan `srcset`, `width`, dan `height`.
 - `<!--include:cta-->` menyisipkan partial.
-- Komentar `<!--// ... -->` dibuang saat build.
+- Komentar `<!--// ... -->` dibuang saat build, jadi aman dipakai untuk catatan pribadi.
 - Halaman diawali komentar berisi `title`, `nav`, `scripts`, `description` (`{hours}` diganti kalimat jam buka).

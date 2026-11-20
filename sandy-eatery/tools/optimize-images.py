@@ -1,16 +1,4 @@
 #!/usr/bin/env python3
-"""
-Optimasi foto Sandy Eatery.
-
-Membaca semua foto di  assets-src/  lalu menulis:
-  - src/img/<nama>-<lebar>.webp   (beberapa ukuran untuk srcset)
-  - src/data/images.json          (ukuran tiap foto, dipakai build.mjs)
-  - src/img/logo.png, ikon favicon, apple-touch-icon, og-image.jpg
-
-Jalankan ulang setiap kali menambah/mengganti foto:
-    python3 tools/optimize-images.py
-Butuh Python 3 + Pillow (pip install pillow).
-"""
 import json, os, sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
@@ -25,7 +13,6 @@ CREAM = (255, 248, 234)
 OUT.mkdir(parents=True, exist_ok=True)
 DATA.mkdir(parents=True, exist_ok=True)
 
-# bersihkan hasil lama supaya foto yang dihapus tidak tertinggal
 for old in OUT.glob("*.webp"):
     old.unlink()
 
@@ -38,9 +25,9 @@ for p in sorted(SRC.iterdir()):
     name = p.stem
     variants = [x for x in WIDTHS if x < w]
     if w >= 400 and (not variants or w - variants[-1] > 120):
-        variants.append(w)           # sertakan ukuran asli
+        variants.append(w)
     if not variants:
-        variants = [w]               # foto kecil: satu ukuran saja
+        variants = [w]
     for vw in variants:
         vh = round(h * vw / w)
         r = im if vw == w else im.resize((vw, vh), Image.LANCZOS)
@@ -50,7 +37,6 @@ for p in sorted(SRC.iterdir()):
 
 (DATA / "images.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
 
-# ---------- logo & ikon ----------
 logo = Image.open(SRC / "logo.png").convert("RGBA")
 logo.save(OUT / "logo.png", optimize=True)
 
@@ -68,10 +54,9 @@ def icon(size, pad_ratio, path, bg=CREAM, radius=0):
 icon(32, 0.06, OUT / "favicon-32.png", radius=7)
 icon(192, 0.14, OUT / "icon-192.png", radius=40)
 icon(512, 0.14, OUT / "icon-512.png", radius=100)
-icon(180, 0.14, OUT / "apple-touch-icon.png")  # iOS membulatkan sendiri
+icon(180, 0.14, OUT / "apple-touch-icon.png")
 Image.open(OUT / "icon-192.png").convert("RGBA").save(OUT.parent / "static" / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
 
-# ---------- gambar pratinjau link (WhatsApp/Instagram/Google) ----------
 def font(size, bold=True):
     for f in ("/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf",
               "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"):
@@ -85,7 +70,6 @@ scale = H / bg.height
 bg = bg.resize((round(bg.width * scale), H), Image.LANCZOS)
 card = Image.new("RGB", (W, H), (10, 7, 7))
 card.paste(bg, (W - bg.width, 0))
-# gradasi gelap di kiri agar teks terbaca
 grad = Image.new("L", (W, H), 0)
 gd = ImageDraw.Draw(grad)
 for x in range(W):

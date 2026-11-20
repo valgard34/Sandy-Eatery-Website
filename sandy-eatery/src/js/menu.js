@@ -1,4 +1,3 @@
-/* menu.js — tab Pizza / Makanan / Minuman / Semua di halaman menu. */
 (function () {
     'use strict';
     var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab[data-tab]'));
@@ -11,7 +10,7 @@
         tabs.forEach(function (t) { t.setAttribute('aria-pressed', String(t.dataset.tab === name)); });
         groups.forEach(function (g) { g.hidden = !(name === 'semua' || g.dataset.group === name); });
         if (updateHash) {
-            try { history.replaceState(null, '', name === 'pizza' ? location.pathname : '#' + name); } catch (e) { /* abaikan */ }
+            try { history.replaceState(null, '', name === 'pizza' ? location.pathname : '#' + name); } catch (e) {}
         }
     }
 
