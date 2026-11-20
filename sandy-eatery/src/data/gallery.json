@@ -1,0 +1,114 @@
+{
+  "categories": [
+    {
+      "id": "pizza",
+      "label": "Pizza"
+    },
+    {
+      "id": "makanan",
+      "label": "Makanan"
+    },
+    {
+      "id": "minuman",
+      "label": "Minuman"
+    },
+    {
+      "id": "acara",
+      "label": "Acara & Berbagi"
+    }
+  ],
+  "items": [
+    {
+      "img": "pizza-cheese-pull-wide",
+      "cat": "pizza",
+      "size": "big",
+      "caption": "Keju mozzarella yang melar",
+      "alt": "Irisan pizza Sandy Eatery diangkat dari piring, keju mozzarella melar, dengan sayuran segar di belakangnya"
+    },
+    {
+      "img": "tokkebi",
+      "cat": "makanan",
+      "size": "tall",
+      "caption": "Tokkebi",
+      "alt": "Tiga Tokkebi, corndog crispy berbalut remah oranye, di atas piring hitam"
+    },
+    {
+      "img": "box-sharing",
+      "cat": "acara",
+      "size": "normal",
+      "caption": "Box Sharing",
+      "alt": "Box Sharing berisi empat Pizza Cone dalam kotak bertuliskan Pizza Cone"
+    },
+    {
+      "img": "cone-tart",
+      "cat": "acara",
+      "size": "normal",
+      "caption": "Cone Tart untuk ulang tahun",
+      "alt": "Cone Tart ditata seperti buket dengan hiasan Happy Birthday dan pita merah"
+    },
+    {
+      "img": "pizza-top-down",
+      "cat": "pizza",
+      "size": "wide",
+      "caption": "Pizza di atas talenan kayu",
+      "alt": "Pizza tampak dari atas di atas talenan kayu, dikelilingi keju parut, paprika, bawang putih, dan cabai"
+    },
+    {
+      "img": "pizza-cheese-pull-close",
+      "cat": "pizza",
+      "size": "wide",
+      "caption": "Sajian hangat",
+      "alt": "Close-up satu irisan pizza diangkat dengan keju yang menjuntai"
+    },
+    {
+      "img": "pizza-express-pack",
+      "cat": "pizza",
+      "size": "tall",
+      "caption": "Kemasan The Real Pizza Express",
+      "alt": "Kemasan hitam The Real Pizza Express bertuliskan Sandy Eatery, di depannya pizza Beef Kebab Mozza di atas piring dengan sachet saus sambal"
+    },
+    {
+      "img": "spaghetti",
+      "cat": "makanan",
+      "size": "normal",
+      "caption": "Spaghetti Nerocoos",
+      "alt": "Spaghetti dengan bola sosis, saus tomat, dan keju parut"
+    },
+    {
+      "img": "kopi-susu",
+      "cat": "minuman",
+      "size": "normal",
+      "caption": "Ice Kopi Susu",
+      "alt": "Segelas Ice Kopi Susu dengan tutup plastik di meja kayu"
+    },
+    {
+      "img": "pizza-hands-top",
+      "cat": "pizza",
+      "size": "tall",
+      "caption": "Pizza Pan dari atas",
+      "alt": "Dua tangan memegang piring berisi pizza dengan sosis dan keju"
+    },
+    {
+      "img": "thai-tea",
+      "cat": "minuman",
+      "size": "normal",
+      "caption": "Es Thai Tea Milk",
+      "alt": "Segelas Es Thai Tea Milk dengan sedotan hitam"
+    },
+    {
+      "img": "pizza-apron",
+      "cat": "pizza",
+      "size": "normal",
+      "caption": "Dari tangan ke meja",
+      "alt": "Koki berapron cokelat memegang sepiring pizza dengan kedua tangan",
+      "watermark": true
+    },
+    {
+      "img": "pizza-board-angle",
+      "cat": "pizza",
+      "size": "full",
+      "caption": "Pizza Pan siap disantap",
+      "alt": "Pizza dengan pinggiran tebal di atas piring putih dan talenan kayu, bahan-bahan segar di latar"
+    }
+  ]
+}

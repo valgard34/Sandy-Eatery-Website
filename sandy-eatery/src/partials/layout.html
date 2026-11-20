@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{page.fullTitle}}</title>
+    {{{sec.seo}}}
+    <meta name="theme-color" content="{{site.themeColor}}">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,700&family=Nunito:wght@400;600;700;800&display=swap">
+    {{{sec.preload}}}
+    <link rel="stylesheet" href="{{{sec.css}}}">
+    <script>
+        document.documentElement.classList.add('js');
+        // jaring pengaman: kalau script utama gagal dimuat, konten animasi tetap tampil
+        setTimeout(function () { if (!document.documentElement.dataset.ready) document.documentElement.classList.add('reveal-fallback'); }, 3500);
+    </script>
+    {{{sec.jsonld}}}
+</head>
+<body data-open="{{site.openMin}}" data-close="{{site.closeMin}}" data-closed="{{site.closedCsv}}" data-tz="{{site.hours.timeZone}}">
+    <a class="skip-link" href="#konten">Lewati ke konten</a>
+
+    {{{header}}}
+
+    <main id="konten">
+{{{content}}}
+    </main>
+
+    {{{footer}}}
+
+    {{{sec.scripts}}}
+</body>
+</html>

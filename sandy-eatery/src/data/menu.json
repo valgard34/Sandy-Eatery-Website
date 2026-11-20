@@ -1,0 +1,125 @@
+{
+  "groups": [
+    {
+      "id": "pizza",
+      "title": "Pizza",
+      "subtitle": "Pilihan andalan Sandy Eatery",
+      "banner": { "img": "pizza-cheese-pull-close", "alt": "Irisan pizza diangkat dengan keju mozzarella yang melar", "position": "50% 55%" },
+      "categories": [
+        {
+          "title": "Pizza Cone", "thumb": "box-sharing",
+          "items": [
+            { "name": "Pizza Cone Cheese", "price": 10 },
+            { "name": "Pizza Cone Mozza", "price": 12 },
+            { "name": "Pizza Cone Pepperoni", "price": 12 },
+            { "name": "Pizza Cone Smoke Beef", "price": 12 },
+            { "name": "Box Sharing", "price": 4 }
+          ]
+        },
+        {
+          "title": "Pizza Pan", "meta": "Diameter 20 cm", "thumb": "pizza-board-angle", "thumbPosition": "50% 70%",
+          "items": [
+            { "name": "Ocean Mozza", "price": 24 },
+            { "name": "Beef Kebab Mozza", "price": 24 },
+            { "name": "Beef Sosis Mozza", "price": 24 },
+            { "name": "Pepperoni Mozza", "price": 26 },
+            { "name": "Smoke Beef Mozza", "price": 26 }
+          ]
+        },
+        {
+          "title": "Pizza Large", "meta": "Diameter 26 cm", "badge": "26 cm",
+          "items": [
+            { "name": "Large Pepperoni", "price": 48 },
+            { "name": "Large Smoke Beef", "price": 48 }
+          ]
+        },
+        {
+          "title": "Long Pizza", "meta": "Ukuran 6×25 cm", "badge": "6×25",
+          "items": [
+            { "name": "Long Sosis", "price": 24 },
+            { "name": "Long Pepperoni", "price": 24 }
+          ]
+        },
+        {
+          "title": "Pizza Tanoz", "meta": "Raksasa 40×60 cm", "badge": "40×60",
+          "items": [
+            { "name": "Tanoz Cheese", "price": 100 },
+            { "name": "Tanoz Mozza", "price": 130 }
+          ]
+        },
+        {
+          "title": "Cone Tart", "thumb": "cone-tart",
+          "items": [
+            { "name": "Isi 7 Cheese", "price": 100 },
+            { "name": "Isi 10 Cheese", "price": 120 },
+            { "name": "Isi 10 Mozza", "price": 140 },
+            { "name": "Isi 15 Cheese", "price": 170 },
+            { "name": "Isi 15 Mozza", "price": 200 },
+            { "name": "+ Lampu", "price": 10 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "makanan",
+      "title": "Makanan",
+      "subtitle": "Camilan dan hidangan pendamping",
+      "banner": { "img": "tokkebi", "alt": "Tokkebi, corndog crispy di atas piring hitam", "position": "50% 62%" },
+      "categories": [
+        {
+          "title": "Tokkebi", "meta": "Corndog", "thumb": "tokkebi", "thumbPosition": "50% 70%",
+          "items": [
+            { "name": "Crispy Sosis Mozza", "price": 13 },
+            { "name": "Crispy Full Mozza", "price": 13 }
+          ]
+        },
+        {
+          "title": "Spaghetti Nerocoos", "thumb": "spaghetti",
+          "items": [
+            { "name": "Original", "price": 15 },
+            { "name": "Nerocoos (Sedang – Pedas)", "price": 17 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "minuman",
+      "title": "Minuman",
+      "subtitle": "Kopi, teh, dan lainnya",
+      "categories": [
+        {
+          "title": "Kopi", "thumb": "kopi-susu",
+          "items": [
+            { "name": "Kopi Tubruk", "price": 7 },
+            { "name": "Kopi Tubruk Susu", "price": 10 },
+            { "name": "Ice Kopi Susu", "price": 13 },
+            { "name": "Ice Kopi Gula Aren", "price": 15 },
+            { "name": "Ice Kopi Caramel", "price": 17 }
+          ]
+        },
+        {
+          "title": "Coklat",
+          "items": [
+            { "name": "Coklat Panas", "price": 10 },
+            { "name": "Coklat Susu Panas", "price": 13 },
+            { "name": "Es Coklat", "price": 16 },
+            { "name": "Es Coklat Susu", "price": 19 }
+          ]
+        },
+        {
+          "title": "Non Kopi", "thumb": "thai-tea",
+          "items": [
+            { "name": "Teh Hangat (manis / tawar)", "price": 6 },
+            { "name": "Es Teh (manis / tawar)", "price": 6 },
+            { "name": "Es Greentea", "price": 8 },
+            { "name": "Es Greentea Milk", "price": 13 },
+            { "name": "Es Thai Tea Milk", "price": 13 },
+            { "name": "Es Mangga", "price": 10 },
+            { "name": "Es Teh Leci", "price": 10 },
+            { "name": "Mineral", "price": 5 }
+          ]
+        }
+      ]
+    }
+  ]
+}

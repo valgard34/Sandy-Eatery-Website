@@ -1,0 +1,33 @@
+<!--
+title: Menu
+nav: menu
+scripts: menu
+description: Daftar menu dan harga Sandy Eatery Malang: Pizza Cone, Pizza Pan, Pizza Large, Pizza Tanoz, Tokkebi, Spaghetti Nerocoos, kopi, dan minuman.
+-->
+        <section class="page-hero">
+            <div class="page-hero-media" aria-hidden="true">[[img pizza-top-down sizes="(min-width: 900px) 55vw, 100vw" pos="50% 45%"]]</div>
+            <div class="wrap">
+                <p class="eyebrow">Daftar Menu</p>
+                <h1>Pilih <i>favoritmu.</i></h1>
+                <p>Semua menu dan harga Sandy Eatery dalam satu halaman.</p>
+            </div>
+        </section>
+
+        <div class="menu-tabs-bar">
+            <div class="wrap">
+                <div class="menu-tabs" role="group" aria-label="Kategori menu">
+                    <button class="tab" type="button" data-tab="pizza" aria-pressed="true">Pizza</button>
+                    <button class="tab" type="button" data-tab="makanan" aria-pressed="false">Makanan</button>
+                    <button class="tab" type="button" data-tab="minuman" aria-pressed="false">Minuman</button>
+                    <button class="tab" type="button" data-tab="semua" aria-pressed="false">Semua</button>
+                </div>
+            </div>
+        </div>
+
+        {{{sec.menu}}}
+
+        <section class="section tight">
+            <div class="wrap">
+                <p class="menu-note">Harga dalam ribuan rupiah (10k = Rp 10.000). Harga dapat berubah sewaktu-waktu. {{site.hoursSentence}}.</p>
+            </div>
+        </section>

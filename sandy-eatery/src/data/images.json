@@ -1,0 +1,123 @@
+{
+  "box-sharing": {
+    "w": 348,
+    "h": 258,
+    "variants": [
+      348
+    ]
+  },
+  "cone-tart": {
+    "w": 348,
+    "h": 257,
+    "variants": [
+      348
+    ]
+  },
+  "kopi-susu": {
+    "w": 348,
+    "h": 257,
+    "variants": [
+      348
+    ]
+  },
+  "pizza-apron": {
+    "w": 1600,
+    "h": 1600,
+    "variants": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "pizza-board-angle": {
+    "w": 1500,
+    "h": 1000,
+    "variants": [
+      480,
+      800,
+      1200,
+      1500
+    ]
+  },
+  "pizza-board-square": {
+    "w": 1600,
+    "h": 1600,
+    "variants": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "pizza-cheese-pull-close": {
+    "w": 1500,
+    "h": 1000,
+    "variants": [
+      480,
+      800,
+      1200,
+      1500
+    ]
+  },
+  "pizza-cheese-pull-wide": {
+    "w": 1500,
+    "h": 1000,
+    "variants": [
+      480,
+      800,
+      1200,
+      1500
+    ]
+  },
+  "pizza-express-pack": {
+    "w": 800,
+    "h": 1422,
+    "variants": [
+      480,
+      800
+    ]
+  },
+  "pizza-hands-top": {
+    "w": 1500,
+    "h": 1000,
+    "variants": [
+      480,
+      800,
+      1200,
+      1500
+    ]
+  },
+  "pizza-top-down": {
+    "w": 1500,
+    "h": 1000,
+    "variants": [
+      480,
+      800,
+      1200,
+      1500
+    ]
+  },
+  "spaghetti": {
+    "w": 348,
+    "h": 257,
+    "variants": [
+      348
+    ]
+  },
+  "thai-tea": {
+    "w": 348,
+    "h": 257,
+    "variants": [
+      348
+    ]
+  },
+  "tokkebi": {
+    "w": 800,
+    "h": 1422,
+    "variants": [
+      480,
+      800
+    ]
+  }
+}

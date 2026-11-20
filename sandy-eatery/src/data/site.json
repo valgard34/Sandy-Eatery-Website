@@ -1,0 +1,33 @@
+{
+  "name": "Sandy Eatery",
+  "slogan": "Rumah Pizza Terlengkap",
+  "tagline": "Rasa hangat, momen dekat.",
+  "url": "",
+  "themeColor": "#b50919",
+
+  "address": {
+    "street": "Jl. Manisa, Bumiayu, Kec. Kedungkandang",
+    "city": "Kota Malang",
+    "region": "Jawa Timur",
+    "postal": "65135",
+    "country": "ID"
+  },
+
+  "hours": {
+    "open": "05.00",
+    "close": "20.00",
+    "closedDays": [3],
+    "timeZone": "Asia/Jakarta"
+  },
+
+  "whatsapp": "6285655978897",
+  "socials": {
+    "instagram": "https://www.instagram.com/sandyeatery.id/",
+    "tiktok": "https://www.tiktok.com/@sandyeatery"
+  },
+
+  "map": {
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.866567400721!2d112.63830347432592!3d-8.012693579956778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd627006574d167%3A0x93cebe8846ed1816!2sSandy%20Eatery%20Resto%20(Pizza%20Cone%20dan%20Kopi)!5e0!3m2!1sid!2sid!4v1795061625981!5m2!1sid!2sid",
+    "linkUrl": "https://maps.app.goo.gl/Q79CC38o9p5MHqFm8"
+  }
+}

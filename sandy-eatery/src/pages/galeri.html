@@ -1,0 +1,40 @@
+<!--
+title: Galeri
+nav: galeri
+scripts: galeri
+description: Galeri foto Sandy Eatery Malang: pizza, Tokkebi, spaghetti, kopi, dan sajian untuk acara berbagi.
+-->
+        <section class="page-hero">
+            <div class="page-hero-media" aria-hidden="true">[[img pizza-board-angle sizes="(min-width: 900px) 55vw, 100vw" pos="50% 60%"]]</div>
+            <div class="wrap">
+                <p class="eyebrow">Galeri</p>
+                <h1>Dari dapur <i>Sandy.</i></h1>
+                <p>Intip sajian kami dari dekat. Ketuk foto untuk memperbesar.</p>
+            </div>
+        </section>
+
+        <section class="section gallery-section">
+            <div class="wrap">
+                <div class="chips" role="group" aria-label="Filter kategori foto">
+                    {{{sec.galleryChips}}}
+                </div>
+                <p class="gal-count" id="galCount" aria-live="polite"></p>
+                <ul class="gal-grid" id="galGrid">
+                {{{sec.galleryTiles}}}
+                </ul>
+            </div>
+        </section>
+
+        <dialog class="lightbox" id="lightbox" aria-label="Penampil foto">
+            <div class="lb-inner">
+                <button class="lb-btn lb-close" type="button" aria-label="Tutup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+                <button class="lb-btn lb-nav lb-prev" type="button" aria-label="Foto sebelumnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+                <figure class="lb-fig">
+                    <img id="lbImg" alt="">
+                    <figcaption><small id="lbCount"></small></figcaption>
+                </figure>
+                <button class="lb-btn lb-nav lb-next" type="button" aria-label="Foto berikutnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
+        </dialog>
+
+<!--include:cta-->

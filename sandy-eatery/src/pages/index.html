@@ -1,0 +1,93 @@
+<!--
+home: true
+title: Sandy Eatery | Rumah Pizza Terlengkap di Malang
+description: Sandy Eatery di Jl. Manisa, Malang: Pizza Pan, Pizza Cone, Tokkebi, kopi, dan minuman segar. {hours}.
+preload: pizza-cheese-pull-wide
+-->
+        <section class="hero">
+            <div class="hero-media">
+                [[img pizza-cheese-pull-wide alt="Irisan pizza Sandy Eatery diangkat dari piring, keju mozzarella melar, dengan sayuran segar di belakangnya" sizes="(min-width: 900px) 62vw, 100vw" pos="62% 50%" eager]]
+            </div>
+            <div class="wrap hero-inner">
+                <div class="hero-copy">
+                    <span class="status" data-status>{{site.statusFallback}}</span>
+                    <p class="eyebrow">{{site.slogan}}</p>
+                    <h1>Rasa hangat,<span>momen dekat.</span></h1>
+                    <p class="lead">Pizza dari Pizza Cone sampai Pizza Tanoz, ditemani Tokkebi, kopi, dan minuman segar. Buka sejak pagi di Jl. Manisa, Malang.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="menu.html">Lihat Menu</a>
+                        <a class="btn ghost-light" href="kontak.html">Lihat Lokasi</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-strip" aria-label="Info singkat">
+            <div class="wrap">
+                <div class="info-grid">
+                    <div class="info-item"><small>Jam Buka</small><strong>{{site.hours.open}} – {{site.hours.close}}</strong><span>{{site.daysLine}}</span></div>
+                    <div class="info-item"><small>Lokasi</small><strong>Jl. Manisa, Malang</strong><span>Bumiayu, Kedungkandang</span></div>
+                    <div class="info-item"><small>Mulai dari</small><strong>Rp {{site.minPrice}}k</strong><span>Menu favorit sepanjang hari</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="best-seller">
+            <div class="wrap">
+                <div class="section-head center">
+                    <p class="eyebrow">Favorit Pelanggan</p>
+                    <h2>Menu <em class="hl">best seller</em></h2>
+                    <p>Tiga andalan yang paling sering jadi pilihan.</p>
+                </div>
+                <div class="best-grid">
+                    <article class="best-card reveal">
+                        <div class="best-photo">[[img pizza-board-angle alt="Pizza Pan Sandy Eatery dengan keju mozzarella di atas talenan kayu" sizes="(min-width: 960px) 360px, (min-width: 520px) 520px, 100vw" pos="50% 62%"]]<span class="badge">Best Seller</span></div>
+                        <div class="best-body">
+                            <h3>Pizza Pan</h3>
+                            <p>Pizza diameter 20 cm dengan topping melimpah dan mozzarella yang meleleh.</p>
+                            <div class="best-meta"><span>Mulai dari</span><b>Rp 24k</b></div>
+                            <a class="btn ghost" href="menu.html#pizza">Lihat varian</a>
+                        </div>
+                    </article>
+                    <article class="best-card reveal">
+                        <div class="best-photo">[[img box-sharing alt="Pizza Cone dalam Box Sharing" sizes="(min-width: 960px) 360px, (min-width: 520px) 520px, 100vw"]]<span class="badge">Best Seller</span></div>
+                        <div class="best-body">
+                            <h3>Pizza Cone</h3>
+                            <p>Pizza berbentuk cone yang praktis dinikmati. Pesan Box Sharing untuk berbagi bersama.</p>
+                            <div class="best-meta"><span>Mulai dari</span><b>Rp 10k</b></div>
+                            <a class="btn ghost" href="menu.html#pizza">Lihat varian</a>
+                        </div>
+                    </article>
+                    <article class="best-card reveal">
+                        <div class="best-photo">[[img tokkebi alt="Tokkebi crispy dengan sosis mozzarella" sizes="(min-width: 960px) 360px, (min-width: 520px) 520px, 100vw" pos="50% 66%"]]<span class="badge">Best Seller</span></div>
+                        <div class="best-body">
+                            <h3>Tokkebi</h3>
+                            <p>Corndog crispy dengan isian sosis mozzarella atau full mozzarella.</p>
+                            <div class="best-meta"><span>Harga</span><b>Rp 13k</b></div>
+                            <a class="btn ghost" href="menu.html#makanan">Lihat varian</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--// BAGIAN PEMESANAN: tempatkan section pemesananmu di sini (di antara "Best Seller" dan "Galeri"). Baris ini tidak ikut ke hasil build. -->
+
+        <section class="section dark gallery-teaser">
+            <div class="wrap">
+                <div class="section-head split">
+                    <div>
+                        <p class="eyebrow">Galeri</p>
+                        <h2>Dari dapur <em class="hl">Sandy.</em></h2>
+                    </div>
+                    <a class="btn ghost-light" href="galeri.html">Lihat semua foto</a>
+                </div>
+                <ul class="mosaic reveal">
+                    {{{sec.mosaic}}}
+                </ul>
+            </div>
+        </section>
+
+        {{{sec.testimoni}}}
+
+<!--include:cta-->

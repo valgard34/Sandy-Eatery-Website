@@ -1,0 +1,39 @@
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html" aria-label="{{site.name}}, ke beranda">
+                        <span class="brand-mark"><img src="img/logo.png" alt="" width="40" height="50"></span>
+                        <span class="brand-name">Sandy<small>EATERY</small></span>
+                    </a>
+                    <p>{{site.slogan}}. {{site.tagline}}</p>
+                </div>
+                <div>
+                    <h4>Jelajahi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                        <li><a href="tentang.html">Tentang</a></li>
+                        <li><a href="kontak.html">Kontak &amp; Lokasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Jam Buka</h4>
+                    <ul>
+                        <li>{{site.hoursLine1}}</li>
+                        {{{site.hoursLine2Html}}}
+                    </ul>
+                </div>
+                <div>
+                    <h4>Temukan Kami</h4>
+                    <address>{{site.fullAddress}}</address>
+                    {{{sec.footerSocial}}}
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span data-year>2026</span> {{site.name}}. Semua hak dilindungi.</span>
+                <span>{{site.address.city}}, {{site.address.region}}</span>
+            </div>
+        </div>
+    </footer>

@@ -1,0 +1,13 @@
+{
+  "name": "sandy-eatery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Sandy Eatery (static, tanpa dependensi)",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --serve",
+    "images": "python3 tools/optimize-images.py"
+  },
+  "engines": { "node": ">=18" }
+}
